@@ -82,6 +82,7 @@
             this.btnAddNewResponse.TabIndex = 4;
             this.btnAddNewResponse.Text = "Add New Response";
             this.btnAddNewResponse.UseVisualStyleBackColor = true;
+            this.btnAddNewResponse.Click += new System.EventHandler(this.btnAddNewResponse_Click);
             // 
             // frmAddResponse
             // 
