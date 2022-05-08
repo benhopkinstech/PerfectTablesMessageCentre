@@ -28,7 +28,6 @@ namespace PerfectTablesMessageCentre
             {
                 XDocument xDoc = XDocument.Load(xmlDoc);
                     string id = xDoc.Root.Elements("Response").Attributes("id").Last().Value.ToString();
-                MessageBox.Show(id);
                 XElement response = new XElement("Response", new XAttribute("id", int.Parse(id) + 1),
                     new XElement("Title", title),
                     new XElement("Message", message));
