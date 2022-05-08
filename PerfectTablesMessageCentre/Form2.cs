@@ -27,17 +27,21 @@ namespace PerfectTablesMessageCentre
             if (File.Exists(xmlDoc))
             {
                 XDocument xDoc = XDocument.Load(xmlDoc);
-                XElement ttl = new XElement("Title", title);
-                XElement msg = new XElement("Message", message);
-                xDoc.Root.Add(ttl);
-                xDoc.Root.Add(msg);
+                    string id = xDoc.Root.Elements("Response").Attributes("id").Last().Value.ToString();
+                MessageBox.Show(id);
+                XElement response = new XElement("Response", new XAttribute("id", int.Parse(id) + 1),
+                    new XElement("Title", title),
+                    new XElement("Message", message));
+                xDoc.Root.Add(response);
                 xDoc.Save(xmlDoc);
             }
             else
             {
                 XElement response = new XElement("Responses",
-                new XElement("Title", title),
-                new XElement("Message", message));
+                    new XElement("Response", new XAttribute("id", 1),
+                        new XElement("Title", title),
+                        new XElement("Message", message)));
+                
                 response.Save("responses.xml");
             }
             
