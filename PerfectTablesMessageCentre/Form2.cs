@@ -21,7 +21,7 @@ namespace PerfectTablesMessageCentre
         private void btnAddNewResponse_Click(object sender, EventArgs e)
         {
             string title = txtResponseTitle.Text;
-            string message = txtResponse.Text;
+            string message = txtResponse.Text.Replace(Environment.NewLine, "\n");
             string xmlDoc = "responses.xml";
             
             if (File.Exists(xmlDoc))
