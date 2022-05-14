@@ -23,11 +23,11 @@ namespace PerfectTablesMessageCentre
             string title = txtResponseTitle.Text;
             string message = txtResponse.Text;
             string xmlDoc = "responses.xml";
-
+            
             if (File.Exists(xmlDoc))
             {
                 XDocument xDoc = XDocument.Load(xmlDoc);
-                    string id = xDoc.Root.Elements("Response").Attributes("id").Last().Value.ToString();
+                string id = xDoc.Root.Elements("Response").Attributes("id").Last().Value.ToString();
                 XElement response = new XElement("Response", new XAttribute("id", int.Parse(id) + 1),
                     new XElement("Title", title),
                     new XElement("Message", message));
@@ -40,10 +40,11 @@ namespace PerfectTablesMessageCentre
                     new XElement("Response", new XAttribute("id", 1),
                         new XElement("Title", title),
                         new XElement("Message", message)));
-                
                 response.Save("responses.xml");
             }
-            
+
+            MessageBox.Show("Response Added!");
+            this.Close();
         }
     }
 }
