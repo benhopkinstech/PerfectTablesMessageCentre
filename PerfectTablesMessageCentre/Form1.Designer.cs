@@ -58,7 +58,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(407, 612);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(407, 77);
             this.Controls.Add(this.btnAddResponse);
             this.Controls.Add(this.lblSavedResponses);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
