@@ -48,7 +48,7 @@
             this.btnAddResponse.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAddResponse.Location = new System.Drawing.Point(12, 14);
             this.btnAddResponse.Name = "btnAddResponse";
-            this.btnAddResponse.Size = new System.Drawing.Size(372, 31);
+            this.btnAddResponse.Size = new System.Drawing.Size(383, 31);
             this.btnAddResponse.TabIndex = 1;
             this.btnAddResponse.Text = "Add a Response";
             this.btnAddResponse.UseVisualStyleBackColor = true;
@@ -58,7 +58,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(396, 510);
+            this.ClientSize = new System.Drawing.Size(407, 612);
             this.Controls.Add(this.btnAddResponse);
             this.Controls.Add(this.lblSavedResponses);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
