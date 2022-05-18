@@ -84,7 +84,18 @@ namespace PerfectTablesMessageCentre
         private void btnDelete_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
-            int id = Int32.Parse(Regex.Match(button.Name, @"\d+").Value);
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this response?", "Response Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                int id = Int32.Parse(Regex.Match(button.Name, @"\d+").Value);
+                string xmlDoc = "responses.xml";
+                XDocument xDoc = XDocument.Load(xmlDoc);
+                xDoc.Descendants("Response")
+                        .Where(x => (string)x.Attribute("id") == id.ToString())
+                        .Remove();
+                xDoc.Save(xmlDoc);
+                MessageBox.Show("Response Deleted");
+            }
         }
         private void btnCopy_Click(object sender, EventArgs e)
         {
