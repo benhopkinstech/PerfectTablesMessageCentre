@@ -5,6 +5,7 @@ namespace PerfectTablesMessageCentre
 {
     public partial class frmMain : Form
     {
+        private Dictionary<string, ListBox> _listboxes = new Dictionary<string, ListBox>();
         public frmMain()
         {
             ListBox[] lstBox;
@@ -31,13 +32,14 @@ namespace PerfectTablesMessageCentre
                 {
                     string id = xe.Attribute("id").Value;
                     lstBox[i] = new ListBox();
-                    lstBox[i].Name = "txtMessage" + id;
+                    lstBox[i].Name = "lstMessage" + id;
                     foreach (string s in xe.Element("Message").Value.Split("\n"))
                     {
                         lstBox[i].Items.Add(s);
                     }
                     lstBox[i].Location = new Point(12, 78 + space);
                     lstBox[i].Size = new Size(340, 55);
+                    _listboxes.Add(lstBox[i].Name, lstBox[i]);
                     lbl[i] = new Label();
                     lbl[i].Name = "lblTitle" + id;
                     lbl[i].Text = xe.Element("Title").Value;
@@ -88,6 +90,14 @@ namespace PerfectTablesMessageCentre
         {
             Button button = sender as Button;
             int id = Int32.Parse(Regex.Match(button.Name, @"\d+").Value);
+            string s = "";
+            ListBox list = _listboxes["lstMessage" + id];
+            foreach (var item in list.Items)
+            {
+                s += item.ToString() + "\n";
+            }
+            string copy = s.Remove(s.Length - 1);
+            Clipboard.SetText(copy);
         }
         private void btnAddResponse_Click(object sender, EventArgs e)
         {
