@@ -44,9 +44,10 @@ namespace PerfectTablesMessageCentre
             }
 
             MessageBox.Show("Response Added!");
-            this.Close();
+            this.Hide();
             frmMain form = new frmMain();
-            form.Show();
+            form.ShowDialog();
+            this.Close();
         }
     }
 }

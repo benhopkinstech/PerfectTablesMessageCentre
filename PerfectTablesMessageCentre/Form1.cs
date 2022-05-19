@@ -99,7 +99,8 @@ namespace PerfectTablesMessageCentre
             form.title = title;
             form.response = response;
             form.id = id;
-            form.Show();
+            form.ShowDialog();
+            this.Close();
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -117,7 +118,8 @@ namespace PerfectTablesMessageCentre
                 MessageBox.Show("Response Deleted");
                 this.Hide();
                 frmMain form = new frmMain();
-                form.Show();
+                form.ShowDialog();
+                this.Close();
             }
         }
         private void btnCopy_Click(object sender, EventArgs e)
@@ -137,7 +139,8 @@ namespace PerfectTablesMessageCentre
         {
             this.Hide();
             frmAddResponse form = new frmAddResponse();
-            form.Show();
+            form.ShowDialog();
+            this.Close();
         }
     }
 }

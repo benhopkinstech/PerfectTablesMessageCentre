@@ -36,9 +36,10 @@ namespace PerfectTablesMessageCentre
             update.Element("Message").Value = txtResponse.Text.Replace(Environment.NewLine, "\n"); ;
             xDoc.Save(xmlDoc);
             MessageBox.Show("Response Updated!");
-            this.Close();
+            this.Hide();
             frmMain form = new frmMain();
-            form.Show();
+            form.ShowDialog();
+            this.Close();
         }
     }
 }
