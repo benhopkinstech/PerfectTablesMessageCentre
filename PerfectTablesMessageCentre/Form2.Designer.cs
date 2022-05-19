@@ -40,7 +40,7 @@
             // 
             this.lblResponseTitle.AutoSize = true;
             this.lblResponseTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblResponseTitle.Location = new System.Drawing.Point(12, 10);
+            this.lblResponseTitle.Location = new System.Drawing.Point(10, 8);
             this.lblResponseTitle.Name = "lblResponseTitle";
             this.lblResponseTitle.Size = new System.Drawing.Size(93, 17);
             this.lblResponseTitle.TabIndex = 0;
@@ -49,7 +49,7 @@
             // txtResponseTitle
             // 
             this.txtResponseTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtResponseTitle.Location = new System.Drawing.Point(111, 9);
+            this.txtResponseTitle.Location = new System.Drawing.Point(146, 8);
             this.txtResponseTitle.Name = "txtResponseTitle";
             this.txtResponseTitle.Size = new System.Drawing.Size(245, 25);
             this.txtResponseTitle.TabIndex = 1;
@@ -57,7 +57,7 @@
             // txtResponse
             // 
             this.txtResponse.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtResponse.Location = new System.Drawing.Point(111, 42);
+            this.txtResponse.Location = new System.Drawing.Point(146, 41);
             this.txtResponse.Multiline = true;
             this.txtResponse.Name = "txtResponse";
             this.txtResponse.Size = new System.Drawing.Size(245, 198);
@@ -67,7 +67,7 @@
             // 
             this.lblResponse.AutoSize = true;
             this.lblResponse.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblResponse.Location = new System.Drawing.Point(40, 43);
+            this.lblResponse.Location = new System.Drawing.Point(38, 41);
             this.lblResponse.Name = "lblResponse";
             this.lblResponse.Size = new System.Drawing.Size(65, 17);
             this.lblResponse.TabIndex = 3;
@@ -76,9 +76,9 @@
             // btnAddNewResponse
             // 
             this.btnAddNewResponse.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddNewResponse.Location = new System.Drawing.Point(12, 247);
+            this.btnAddNewResponse.Location = new System.Drawing.Point(10, 245);
             this.btnAddNewResponse.Name = "btnAddNewResponse";
-            this.btnAddNewResponse.Size = new System.Drawing.Size(344, 31);
+            this.btnAddNewResponse.Size = new System.Drawing.Size(381, 31);
             this.btnAddNewResponse.TabIndex = 4;
             this.btnAddNewResponse.Text = "Add New Response";
             this.btnAddNewResponse.UseVisualStyleBackColor = true;
@@ -88,7 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(365, 283);
+            this.ClientSize = new System.Drawing.Size(403, 283);
             this.Controls.Add(this.btnAddNewResponse);
             this.Controls.Add(this.lblResponse);
             this.Controls.Add(this.txtResponse);

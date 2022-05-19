@@ -42,31 +42,32 @@ namespace PerfectTablesMessageCentre
                     {
                         lstBox[i].Items.Add(s);
                     }
-                    lstBox[i].Location = new Point(12, 78 + space);
-                    lstBox[i].Size = new Size(340, 55);
+                    lstBox[i].Location = new Point(12, 68 + space);
+                    lstBox[i].Size = new Size(340, 80);
                     _listboxes.Add(lstBox[i].Name, lstBox[i]);
                     lbl[i] = new Label();
                     lbl[i].Name = "lblTitle" + id;
                     lbl[i].Text = xe.Element("Title").Value;
-                    lbl[i].Location = new Point(12, 58 + space);
+                    lbl[i].Location = new Point(12, 35 + space);
+                    lbl[i].Size = new Size(357, 30);
                     _titles.Add(lbl[i].Name, lbl[i].Text);
                     btnEdit[i] = new Button();
                     btnEdit[i].Name = "btnEdit" + id;
                     btnEdit[i].Text = "Edit Response";
-                    btnEdit[i].Location = new Point(12, 139 + space);
-                    btnEdit[i].Size = new Size(99, 27);
+                    btnEdit[i].Location = new Point(12, 145 + space);
+                    btnEdit[i].Size = new Size(135, 32);
                     btnEdit[i].Click += new EventHandler(btnEdit_Click);
                     btnDelete[i] = new Button();
                     btnDelete[i].Name = "btnDelete" + id;
                     btnDelete[i].Text = "Delete Response";
-                    btnDelete[i].Location = new Point(238, 139 + space);
-                    btnDelete[i].Size = new Size(114, 27);
+                    btnDelete[i].Location = new Point(202, 145 + space);
+                    btnDelete[i].Size = new Size(150, 32);
                     btnDelete[i].Click += new EventHandler(btnDelete_Click);
                     btnCopy[i] = new Button();
                     btnCopy[i].Name = "btnCopy" + id;
                     btnCopy[i].Text = "Copy";
-                    btnCopy[i].Location = new Point(357, 78 + space);
-                    btnCopy[i].Size = new Size(46, 55);
+                    btnCopy[i].Location = new Point(355, 68 + space);
+                    btnCopy[i].Size = new Size(65, 73);
                     btnCopy[i].Click += new EventHandler(btnCopy_Click);
 
                     this.Controls.Add(lstBox[i]);
@@ -75,7 +76,7 @@ namespace PerfectTablesMessageCentre
                     this.Controls.Add(btnDelete[i]);
                     this.Controls.Add(btnCopy[i]);
 
-                    space += 110;
+                    space += 148;
                     i++;
                 }
             }

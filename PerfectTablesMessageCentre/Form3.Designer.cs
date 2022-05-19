@@ -41,7 +41,7 @@
             this.btnUpdateResponse.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnUpdateResponse.Location = new System.Drawing.Point(10, 245);
             this.btnUpdateResponse.Name = "btnUpdateResponse";
-            this.btnUpdateResponse.Size = new System.Drawing.Size(344, 31);
+            this.btnUpdateResponse.Size = new System.Drawing.Size(381, 31);
             this.btnUpdateResponse.TabIndex = 9;
             this.btnUpdateResponse.Text = "Update Response";
             this.btnUpdateResponse.UseVisualStyleBackColor = true;
@@ -60,7 +60,7 @@
             // txtResponse
             // 
             this.txtResponse.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtResponse.Location = new System.Drawing.Point(109, 40);
+            this.txtResponse.Location = new System.Drawing.Point(146, 41);
             this.txtResponse.Multiline = true;
             this.txtResponse.Name = "txtResponse";
             this.txtResponse.Size = new System.Drawing.Size(245, 198);
@@ -69,7 +69,7 @@
             // txtResponseTitle
             // 
             this.txtResponseTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtResponseTitle.Location = new System.Drawing.Point(109, 7);
+            this.txtResponseTitle.Location = new System.Drawing.Point(146, 8);
             this.txtResponseTitle.Name = "txtResponseTitle";
             this.txtResponseTitle.Size = new System.Drawing.Size(245, 25);
             this.txtResponseTitle.TabIndex = 6;
@@ -88,7 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(365, 283);
+            this.ClientSize = new System.Drawing.Size(403, 283);
             this.Controls.Add(this.btnUpdateResponse);
             this.Controls.Add(this.lblResponse);
             this.Controls.Add(this.txtResponse);
