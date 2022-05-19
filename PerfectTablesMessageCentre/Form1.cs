@@ -6,6 +6,7 @@ namespace PerfectTablesMessageCentre
     public partial class frmMain : Form
     {
         private Dictionary<string, ListBox> _listboxes = new Dictionary<string, ListBox>();
+        private Dictionary<string, string> _titles = new Dictionary<string, string>();
         public frmMain()
         {
             ListBox[] lstBox;
@@ -44,6 +45,7 @@ namespace PerfectTablesMessageCentre
                     lbl[i].Name = "lblTitle" + id;
                     lbl[i].Text = xe.Element("Title").Value;
                     lbl[i].Location = new Point(12, 58 + space);
+                    _titles.Add(lbl[i].Name, lbl[i].Text);
                     btnEdit[i] = new Button();
                     btnEdit[i].Name = "btnEdit" + id;
                     btnEdit[i].Text = "Edit Response";
@@ -80,6 +82,20 @@ namespace PerfectTablesMessageCentre
         {
             Button button = sender as Button;
             int id = Int32.Parse(Regex.Match(button.Name, @"\d+").Value);
+            String ttl = _titles["lblTitle" + id];
+            string title = ttl;
+            string s = "";
+            ListBox list = _listboxes["lstMessage" + id];
+            foreach (var item in list.Items)
+            {
+                s += item.ToString() + "\n";
+            }
+            string response = s.Remove(s.Length - 1);
+            frmEditResponse form = new frmEditResponse();
+            form.title = title;
+            form.response = response;
+            form.id = id;
+            form.Show();
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
