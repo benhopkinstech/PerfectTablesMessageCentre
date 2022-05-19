@@ -9,6 +9,10 @@ namespace PerfectTablesMessageCentre
         private Dictionary<string, string> _titles = new Dictionary<string, string>();
         public frmMain()
         {
+            InitializeComponent();
+        }
+        private void frmMain_Load(object sender, EventArgs e)
+        {
             ListBox[] lstBox;
             Label[] lbl;
             Button[] btnEdit;
@@ -75,8 +79,6 @@ namespace PerfectTablesMessageCentre
                     i++;
                 }
             }
-
-            InitializeComponent();
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -91,6 +93,7 @@ namespace PerfectTablesMessageCentre
                 s += item.ToString() + "\n";
             }
             string response = s.Remove(s.Length - 1);
+            this.Hide();
             frmEditResponse form = new frmEditResponse();
             form.title = title;
             form.response = response;
@@ -111,6 +114,9 @@ namespace PerfectTablesMessageCentre
                         .Remove();
                 xDoc.Save(xmlDoc);
                 MessageBox.Show("Response Deleted");
+                this.Hide();
+                frmMain form = new frmMain();
+                form.Show();
             }
         }
         private void btnCopy_Click(object sender, EventArgs e)
@@ -128,6 +134,7 @@ namespace PerfectTablesMessageCentre
         }
         private void btnAddResponse_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmAddResponse form = new frmAddResponse();
             form.Show();
         }

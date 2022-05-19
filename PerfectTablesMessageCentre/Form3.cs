@@ -37,6 +37,8 @@ namespace PerfectTablesMessageCentre
             xDoc.Save(xmlDoc);
             MessageBox.Show("Response Updated!");
             this.Close();
+            frmMain form = new frmMain();
+            form.Show();
         }
     }
 }

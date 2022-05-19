@@ -45,6 +45,8 @@ namespace PerfectTablesMessageCentre
 
             MessageBox.Show("Response Added!");
             this.Close();
+            frmMain form = new frmMain();
+            form.Show();
         }
     }
 }
